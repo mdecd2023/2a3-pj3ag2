@@ -1,1 +1,1 @@
-var tipuesearch = {"pages": [{'title': 'About', 'text': 'cmsimde_site', 'tags': '', 'url': 'About.html'}]};
+var tipuesearch = {"pages": [{'title': 'About', 'text': '成員:41023106、41023113、41023125、41023153、 41023103、41023116、41023132、41023151 \n 3ag2倉儲:  https://github.com/mdecd2023/2a2-pj3ag2.git \xa0 \n \n 3ag2網站:  https://mdecd2023.github.io/2a2-pj3ag2 \xa0\xa0 \n cmsimde_site', 'tags': '', 'url': 'About.html'}]};
