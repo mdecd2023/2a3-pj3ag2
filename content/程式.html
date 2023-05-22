@@ -327,7 +327,7 @@ function regress(team)
         sim.setObjectOrientation(BubbleRobs[i], -1, initOrientation[i])
     end
     angle[team+1] = angle[team+1] + 1 
-    if angle[team+1] == 10 and team == 2 or 0 then
+    if angle[team+1] == 10  then
         angle[team+1] = 0 
         angle[team+2] = angle[team+2] + 1
     end
@@ -355,13 +355,16 @@ function sysCall_init()
         initPosition[i] = sim.getObjectPosition(BubbleRob, -1)
         initOrientation[i] = sim.getObjectOrientation(BubbleRob, -1)
     end
-    print(initPosition[1])
 end
   
 function sysCall_actuation()
     for i = 0, 5 do
         result=sim.readProximitySensor(sensors[i+1])
         if(result&gt;0)then
+            for i = 1,8 do
+                sim.setObjectPosition(BubbleRobs[i], -1, initPosition[i])
+                sim.setObjectOrientation(BubbleRobs[i], -1, initOrientation[i])
+            end
         end
     end
     scoreresult1=sim.readProximitySensor(socoresensors[1])
