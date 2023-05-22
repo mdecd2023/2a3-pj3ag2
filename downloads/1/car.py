@@ -1,8 +1,7 @@
-    # pip install pyzmq cbor keyboard
+# pip install pyzmq cbor keyboard
 #from zmqRemoteApi import RemoteAPIClient
 from zmqRemoteApi_IPv6 import RemoteAPIClient
 import keyboard
-
 client = RemoteAPIClient('127.0.0.1', 23000)
 
 print('Program started')
@@ -10,11 +9,12 @@ sim = client.getObject('sim')
 sim.startSimulation()
 print('Simulation started')
 
+car = 4
 def setBubbleRobVelocity(leftfrontWheelVelocity, rightfrontWheelVelocity,leftbackWheelVelocity,rightbackWheelVelocity):
-    leftfrontMotor = sim.getObject('/LF')
-    rightfrontMotor = sim.getObject('/RF')
-    leftbackMotor = sim.getObject('/LB')
-    rightbackMotor = sim.getObject('/RB')
+    leftfrontMotor = sim.getObject('/Shape['+str(car)+']/LF')
+    rightfrontMotor = sim.getObject('/Shape['+str(car)+']/RF')
+    leftbackMotor = sim.getObject('/Shape['+str(car)+']/LB')
+    rightbackMotor = sim.getObject('/Shape['+str(car)+']/RB')
     
     
     sim.setJointTargetVelocity(leftfrontMotor, leftfrontWheelVelocity)
@@ -29,16 +29,16 @@ time.sleep(2)
 setBubbleRobVelocity(0.0, 0.0)
 '''
 # use keyborad to move BubbleRob
-
-while True:wds
+v  = 10.0
+while True:
     if keyboard.is_pressed('w'):
-        setBubbleRobVelocity(1.0, 1.0,1.0, 1.0)
+        setBubbleRobVelocity(v, v,v, v)
     elif keyboard.is_pressed('s'):
-        setBubbleRobVelocity(-1.0, -1.0,-1.0, -1.0)
+        setBubbleRobVelocity(-v, -v,-v, -v)
     elif keyboard.is_pressed('a'):
-        setBubbleRobVelocity(-1.0, 1.0,-1.0, 1.0)
+        setBubbleRobVelocity(-v, v,-v, v)
     elif keyboard.is_pressed('d'):
-        setBubbleRobVelocity(1.0, -1.0,1.0, -1.0)
+        setBubbleRobVelocity(v, -v,v, -v)
     elif keyboard.is_pressed('q'):
         # stop simulation
         sim.stopSimulation()
