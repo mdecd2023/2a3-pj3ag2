@@ -255,6 +255,61 @@ function sysCall_actuation()
     end 
  end
 </pre>
+<p></p>
+<p>記分板程式整理</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">local joints = {{},{},{},{}}
+local sensors = {{},{},{},{},{},{}}
+local socoresensors = {{},{}}
+local angle = {0,0,0,0}
+local initPosition = {}
+local initOrientation = {}
+function regress(team)
+    --sim.pauseSimulation()
+    sim.setObjectPosition(ball, -1, initPosition)
+    sim.setObjectOrientation(ball, -1, initOrientation)
+    angle[team+1] = angle[team+1] + 1 
+    if angle[team+1] == 10 and team == 2 or 0 then
+        angle[team+1] = 0 
+        angle[team+2] = angle[team+2] + 1
+    end
+end
+function sysCall_init()
+    for i = 1, 4 do
+        joint = sim.getObject('/box/joint' .. i)
+        joints[i] = joint
+    end
+    for i = 0, 5 do
+        sensor =  sim.getObject('/Proximity_sensor[' .. i ..']')
+        sensors[i+1] = sensor
+    end
+    for i = 0, 1 do
+        socoresensor =  sim.getObject('/Shape[0]/Proximity_sensor[' .. i ..']')
+        socoresensors[i+1] = socoresensor
+    end
+    ball = sim.getObject('/Capsule')
+    initPosition = sim.getObjectPosition(ball, -1)
+    initOrientation = sim.getObjectOrientation(ball, -1)
+    print(initPosition)
+end
+  
+function sysCall_actuation()
+    for i = 0, 5 do
+        result=sim.readProximitySensor(sensors[i+1])
+        if(result&gt;0)then
+        end
+    end
+    scoreresult1=sim.readProximitySensor(socoresensors[1])
+    scoreresult2=sim.readProximitySensor(socoresensors[2])
+    if(scoreresult1&gt;0) then
+        regress(0)
+    end
+    if(scoreresult2&gt;0)then
+        regress(2)
+    end
+    for i = 1, 4 do
+        sim.setJointTargetPosition(joints[i], angle[i]*-0.62)
+    end 
+ end</pre>
 <p></p><br />pj3 << <a href='pj3.html'>Previous</a> </div>
         
     <!-- footer -->

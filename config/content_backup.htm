@@ -97,4 +97,83 @@ end
 -- See the user manual or the available code snippets for additional callback functions and details
 </pre>
 <p></p>
+<p>記分板連動</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">local joints = {{},{},{},{}}
+local sensors = {{},{},{},{},{},{}}
+local socoresensors = {{},{}}
+local angle = {0,0,0,0}
+local initPosition = {}
+local initPosition = {}
+function regress()
+    --sim.pauseSimulation()
+    --sim.setObjectPosition(bubbleRobBase, -1, initialBubbleRobPosition)
+    --sim.setObjectOrientation(bubbleRobBase, -1, initialBubbleRobOrientation)
+    sim.setObjectPosition(ball, -1, initPosition)
+    sim.setObjectOrientation(ball, -1, initPosition)
+    --sim.setObjectPosition(23, -1, initia)
+    --sim.setObjectOrientation(23, -1, initial)
+end
+function sysCall_init()
+    -- do some initialization here
+    for i = 1, 4 do
+        joint = sim.getObject('/box/joint' .. i)
+
+        joints[i] = joint
+        --print(joints)
+    end
+    for i = 0, 5 do
+        sensor =  sim.getObject('/Proximity_sensor[' .. i ..']')
+        sensors[i+1] = sensor
+    end
+    --print(sensors)
+    for i = 0, 1 do
+        socoresensor =  sim.getObject('/Shape[0]/Proximity_sensor[' .. i ..']')
+        socoresensors[i+1] = socoresensor
+    end
+    ball = sim.getObject('/Capsule')
+    initPosition = sim.getObjectPosition(ball, -1)
+    initialballOrientation = sim.getObjectOrientation(ball, -1)
+    print(initPosition)
+end
+ 
+function sysCall_actuation()
+    -- put your actuation code here
+    
+    for i = 0, 5 do
+        result=sim.readProximitySensor(sensors[i+1])
+        --result=sim.readProximitySensor(sensors[1])
+        if(result&gt;0)then
+            sim.stopSimulation()
+        end
+        --print(result)
+    end
+    scoreresult1=sim.readProximitySensor(socoresensors[1])
+    if(scoreresult1&gt;0) then
+        angle[3] = angle[3] + 1 
+        if angle[3] == 10 then
+            angle[3] = 0 
+            angle[4] = angle[4] + 1
+        end
+        --sim.stopSimulation()
+        regress()
+    end
+    scoreresult2=sim.readProximitySensor(socoresensors[2])
+    if(scoreresult2&gt;0)then
+        angle[1] = angle[1] + 1 
+        if angle[1] == 10 then
+            angle[1] = 0 
+            angle[2] = angle[2] + 1
+        end
+        --sim.stopSimulation()
+        regress()
+
+    end
+    for i = 1, 4 do
+        sim.setJointTargetPosition(joints[i], angle[i]*-0.62)
+        --a = angle[i]
+        --angle[i] = a + 1
+    end 
+ end
+</pre>
 <p></p>
+<p>程式整理</p>
