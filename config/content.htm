@@ -41,3 +41,40 @@
 <p><img alt="" height="379" src="/images/螢幕擷取畫面 2023-05-22 092654.png" width="790"/></p>
 <p><img alt="" height="468" src="/images/螢幕擷取畫面 2023-05-22 093018.png" width="921"/></p>
 <p><a href="/downloads/計分桿.ttt">/downloads/計分.ttt</a></p>
+<h1>程式</h1>
+<p>記分板測試</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">local joints = {{},{},{},{}}
+local angle = {0,0,0,0}
+function sysCall_init()
+    -- do some initialization here
+      for i = 1, 4 do
+        joint = sim.getObject('/joint' .. i)
+        joints[i] = joint
+        --print(joints)
+    end
+end
+
+function sysCall_actuation()
+    -- put your actuation code here
+    for i = 1, 4 do
+    sim.setJointTargetPosition(joints[i], angle[i])
+    a = angle[i]
+    angle[i] = a + 36
+    end 
+    
+    
+end
+
+function sysCall_sensing()
+    -- put your sensing code here
+    --
+end
+
+function sysCall_cleanup()
+    -- do some clean-up here
+end
+
+-- See the user manual or the available code snippets for additional callback functions and details
+</pre>
+<p></p>
+<p></p>

@@ -141,15 +141,43 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='pj3.html'>Next</a> >> pj3<br /><h1>About</h1>
-<p>成員:41023106、41023113、41023125、41023153、<span>41023103、41023116、41023132、41023151</span></p>
-<p>3ag2倉儲: <a href="https://github.com/mdecd2023/2a2-pj3ag2.git">https://github.com/mdecd2023/2a2-pj3ag2.git</a> </p>
+    <div id="tipue_search_content">pj3 << <a href='pj3.html'>Previous</a> <br /><h1>程式</h1>
+<p>記分板測試</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">local joints = {{},{},{},{}}
+local angle = {0,0,0,0}
+function sysCall_init()
+    -- do some initialization here
+      for i = 1, 4 do
+        joint = sim.getObject('/joint' .. i)
+        joints[i] = joint
+        --print(joints)
+    end
+end
+
+function sysCall_actuation()
+    -- put your actuation code here
+    for i = 1, 4 do
+    sim.setJointTargetPosition(joints[i], angle[i])
+    a = angle[i]
+    angle[i] = a + 36
+    end 
+    
+    
+end
+
+function sysCall_sensing()
+    -- put your sensing code here
+    --
+end
+
+function sysCall_cleanup()
+    -- do some clean-up here
+end
+
+-- See the user manual or the available code snippets for additional callback functions and details
+</pre>
 <p></p>
-<p>3ag2網站: <a href="https://mdecd2023.github.io/2a2-pj3ag2">https://mdecd2023.github.io/2a2-pj3ag2</a>  </p>
-<p></p>
-<div id="gtx-trans" style="position: absolute; left: -30px; top: 149.475px;">
-<div class="gtx-trans-icon"></div>
-</div><br /> <a href='pj3.html'>Next</a> >> pj3</div>
+<p></p><br />pj3 << <a href='pj3.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
