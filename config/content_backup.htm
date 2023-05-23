@@ -17,6 +17,7 @@
 <p></p>
 <p><strong>場景模擬</strong></p>
 <p><img alt="" height="579" src="/images/螢幕擷取畫面 2023-05-22 105450.png" width="872"/></p>
+<p></p>
 <p><a href="/downloads/總和球場.ttt">/downloads/總和球場.ttt</a></p>
 <p></p>
 <p><a href="/downloads/car.ttt">球員場景建立</a></p>
@@ -51,17 +52,20 @@
 <p><strong><span style="background-color: #ffff00;">球場</span></strong></p>
 <p><a href="/downloads/pj3球場.SLDPRT">/downloads/pj3球場.SLDPRT</a></p>
 <p><a href="/downloads/pj3球場.STL">/downloads/pj3球場.STL</a></p>
-<p><img alt="" height="405" src="/images/螢幕擷取畫面 2023-05-22 105718.png" width="720"/></p>
+<p><img caption="false" height="408" src="/images/螢幕擷取畫面 2023-05-22 105718.png" width="725"/></p>
 <p></p>
 <p><a href="/downloads/pj3球場.SLDPRT"></a></p>
 <p><strong><span style="background-color: #ffff00;">改版</span></strong></p>
 <p><a href="/downloads/pj3球場v2.STL">/downloads/pj3球場v2.STL</a></p>
 <p><a href="/downloads/pj3球場v2.SLDPRT">/downloads/pj3球場v2.SLDPRT</a> </p>
 <p></p>
-<p><img alt="" height="430" src="/images/螢幕擷取畫面 2023-05-22 101830.png" width="725"/></p>
+<p><img caption="false" height="430" src="/images/螢幕擷取畫面 2023-05-22 101830.png" width="725"/></p>
 <p><a href="/downloads/球場.ttt">/downloads/球場.ttt</a></p>
-<p><a href="/downloads/pj3球場v2.SLDPRT"></a></p>
-<h1>程式</h1>
+<p><a href="/downloads/pj3球場v2.SLDPRT"></a>加入計時器</p>
+<p><img caption="false" height="408" src="https://cdn.discordapp.com/attachments/1109835699357765732/1110156435637145651/image.png" width="725"/></p>
+<p>計時器模擬影片</p>
+<p></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/H0ptrxxpH9A" title="YouTube video player" width="560"></iframe></p><h1>程式</h1>
 <p>記分板測試</p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">local joints = {{},{},{},{}}
 local angle = {0,0,0,0}
@@ -1146,3 +1150,56 @@ function sysCall_cleanup()
     dotcolor(3)
 end</pre>
 <h2>操控球員</h2>
+<p>初版</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># pip install pyzmq cbor keyboard
+#from zmqRemoteApi import RemoteAPIClient
+from zmqRemoteApi_IPv6 import RemoteAPIClient
+import keyboard
+client = RemoteAPIClient('127.0.0.1', 23000)
+
+print('Program started')
+sim = client.getObject('sim')
+sim.startSimulation()
+print('Simulation started')
+
+car = 4
+def setBubbleRobVelocity(leftfrontWheelVelocity, rightfrontWheelVelocity,leftbackWheelVelocity,rightbackWheelVelocity):
+    leftfrontMotor = sim.getObject('/Shape['+str(car)+']/LF')
+    rightfrontMotor = sim.getObject('/Shape['+str(car)+']/RF')
+    leftbackMotor = sim.getObject('/Shape['+str(car)+']/LB')
+    rightbackMotor = sim.getObject('/Shape['+str(car)+']/RB')
+    
+    
+    sim.setJointTargetVelocity(leftfrontMotor, leftfrontWheelVelocity)
+    sim.setJointTargetVelocity(rightfrontMotor, rightfrontWheelVelocity) 
+    sim.setJointTargetVelocity(leftbackMotor, leftbackWheelVelocity)
+    sim.setJointTargetVelocity(rightbackMotor, rightbackWheelVelocity)
+
+'''
+# Example usage 1:
+setBubbleRobVelocity(1.0, 1.0)
+time.sleep(2)
+setBubbleRobVelocity(0.0, 0.0)
+'''
+# use keyborad to move BubbleRob
+v  = 10.0
+while True:
+    if keyboard.is_pressed('w'):
+        setBubbleRobVelocity(v, v,v, v)
+    elif keyboard.is_pressed('s'):
+        setBubbleRobVelocity(-v, -v,-v, -v)
+    elif keyboard.is_pressed('a'):
+        setBubbleRobVelocity(-v, v,-v, v)
+    elif keyboard.is_pressed('d'):
+        setBubbleRobVelocity(v, -v,v, -v)
+    elif keyboard.is_pressed('q'):
+        # stop simulation
+        sim.stopSimulation()
+    else:
+        setBubbleRobVelocity(0.0, 0.0,0.0, 0.0)
+
+
+
+
+</pre>
+<p></p>
