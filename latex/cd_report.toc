@@ -1,4 +1,8 @@
 \contentsline {chapter}{摘\nobreakspace {}\nobreakspace {}\nobreakspace {}要}{i}{Doc-Start}%
 \contentsline {chapter}{Abstract}{ii}{Doc-Start}%
-\contentsline {chapter}{附錄}{vi}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}前言}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}規則}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}場景建立}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}前言}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}建立球員}{2}{section.2.2}%
 \contentsfinish 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.4.15)  8 MAY 2023 10:06
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.5.20)  2 JUN 2023 16:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,7 +429,7 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Cskip=\skip73
 )
 (y:\miktex-portable\texmfs\install\tex/latex/eso-pic\eso-pic.sty
-Package: eso-pic 2023/03/23 v3.0b eso-pic (RN)
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
 \ESO@tempdima=\dimen263
 \ESO@tempdimb=\dimen264
 
@@ -696,7 +696,7 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 LaTeX Warning: Unused global option(s):
     [14pt].
 
-No file cd_report.aux.
+(cd_report.aux)
 \openout1 = `cd_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -710,7 +710,7 @@ LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
 0.
-(y:\miktex-portable\texmfs\install\tex/latex/base\ts1cmr.fd
+ (y:\miktex-portable\texmfs\install\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 60.
@@ -817,11 +817,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 
 \c@lstlisting=\count335
 Package hyperref Info: Link coloring OFF on input line 60.
+(cd_report.out) (cd_report.out)
 \@outlinefile=\write3
 \openout3 = `cd_report.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 
 Underfull \hbox (badness 10000) detected at line 66
@@ -849,21 +847,41 @@ Overfull \hbox (82.1062pt too wide) detected at line 90
 
 
 Overfull \hbox (145.45496pt too wide) detected at line 92
-\TU/標楷體(0)/m/n/17.28 學 生：|  李 凱 新 \TU/TimesNewRoman(0)/m/n/17.28 (41023106)
+\TU/標楷體(0)/m/n/17.28 學 生：|  江 芷 柔 \TU/TimesNewRoman(0)/m/n/17.28 (41023103)
  []
 
 
-Overfull \hbox (145.25627pt too wide) detected at line 94
+Overfull \hbox (145.89752pt too wide) detected at line 94
+ \TU/標楷體(0)/m/n/17.28 李 凱 新 \TU/TimesNewRoman(0)/m/n/17.28 (41023106)
+ []
+
+
+Overfull \hbox (145.25627pt too wide) detected at line 96
  \TU/標楷體(0)/m/n/17.28 王 翔 楷 \TU/TimesNewRoman(0)/m/n/17.28 (41023113)
  []
 
 
-Overfull \hbox (145.89752pt too wide) detected at line 96
+Overfull \hbox (145.25627pt too wide) detected at line 98
+ \TU/標楷體(0)/m/n/17.28 吳 勁 毅 \TU/TimesNewRoman(0)/m/n/17.28 (41023116)
+ []
+
+
+Overfull \hbox (145.89752pt too wide) detected at line 100
  \TU/標楷體(0)/m/n/17.28 李 學 淵 \TU/TimesNewRoman(0)/m/n/17.28 (41023125)
  []
 
 
-Overfull \hbox (145.89752pt too wide) detected at line 98
+Overfull \hbox (145.89752pt too wide) detected at line 102
+ \TU/標楷體(0)/m/n/17.28 林 秉 賢 \TU/TimesNewRoman(0)/m/n/17.28 (41023132)
+ []
+
+
+Overfull \hbox (145.89752pt too wide) detected at line 104
+ \TU/標楷體(0)/m/n/17.28 張 育 銓 \TU/TimesNewRoman(0)/m/n/17.28 (41023151)
+ []
+
+
+Overfull \hbox (145.89752pt too wide) detected at line 106
  \TU/標楷體(0)/m/n/17.28 張 昱 棠 \TU/TimesNewRoman(0)/m/n/17.28 (41023153)
  []
 
@@ -871,53 +889,50 @@ Overfull \hbox (145.89752pt too wide) detected at line 98
 
 ] (abstract.tex [1
 
-]) [2]
-No file cd_report.toc.
+]) [2] (cd_report.toc)
 \tf@toc=\write4
 \openout4 = `cd_report.toc'.
 
-[3
+ [3
 
-]
-No file cd_report.lof.
+] (cd_report.lof)
 \tf@lof=\write5
 \openout5 = `cd_report.lof'.
 
-[4
+
+(1_introduction.tex [4
 
 ]
-No file cd_report.lot.
-\tf@lot=\write6
-\openout6 = `cd_report.lot'.
+Chapter 1.
+) (2_machine_learning.tex [1
 
-[5
+]
+Chapter 2.
 
-] (10_appendix.tex
-File: ./../images//編譯流程.png Graphic file (type bmp)
-<./../images//編譯流程.png>
- [6]) [7] (cd_report.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+File: ./../images//球員.png Graphic file (type bmp)
+<./../images//球員.png>
+File: ./../images//球員2.png Graphic file (type bmp)
+<./../images//球員2.png>
+) [2
+
+] [3] (cd_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `cd_report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `cd_report.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  59AFD9F5963B957747E109BDFCBA7EA2;226.
+Package rerunfilecheck Info: File `cd_report.out' has not changed.
+(rerunfilecheck)             Checksum: C09F6C15233E0C938EF6A6577B5FA14F;526.
  ) 
 Here is how much of TeX's memory you used:
- 19188 strings out of 411476
- 372293 string characters out of 5820613
- 1865001 words of memory out of 5000000
- 39129 multiletter control sequences out of 15000+600000
- 518226 words of font info for 99 fonts, out of 8000000 for 9000
+ 19145 strings out of 411476
+ 369584 string characters out of 5820613
+ 1854001 words of memory out of 5000000
+ 39091 multiletter control sequences out of 15000+600000
+ 517032 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 72i,17n,84p,620b,459s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,5n,84p,594b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on cd_report.pdf (8 pages).
