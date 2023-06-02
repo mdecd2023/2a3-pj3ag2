@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.5.20)  2 JUN 2023 16:15
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.5.20)  2 JUN 2023 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,22 +917,36 @@ File: ./../images//球員.png Graphic file (type bmp)
 <./../images//球員.png>
 File: ./../images//球員2.png Graphic file (type bmp)
 <./../images//球員2.png>
-) [2
+File: ./../images//螢幕擷取畫面 2023-05-22 092654.png Graphic file (type bmp)
+<./../images//螢幕擷取畫面 2023-05-22 092654.png>
+File: ./../images//螢幕擷取畫面 2023-05-22 093018.png Graphic file (type bmp)
+<./../images//螢幕擷取畫面 2023-05-22 093018.png>
+[2
 
-] [3] (cd_report.aux)
+] [3]
+File: ./../images//螢幕擷取畫面 2023-05-22 105718.png Graphic file (type bmp)
+<./../images//螢幕擷取畫面 2023-05-22 105718.png>
+File: ./../images//球門.png Graphic file (type bmp)
+<./../images//球門.png>
+File: ./../images//螢幕擷取畫面 2023-05-22 101830.png Graphic file (type bmp)
+<./../images//螢幕擷取畫面 2023-05-22 101830.png>
+ [4]) (cd_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `cd_report.out' has not changed.
-(rerunfilecheck)             Checksum: C09F6C15233E0C938EF6A6577B5FA14F;526.
+(rerunfilecheck)             Checksum: CF2D50F6C62AD8D4A8C7C511B6582F63;706.
  ) 
 Here is how much of TeX's memory you used:
- 19145 strings out of 411476
- 369584 string characters out of 5820613
- 1854001 words of memory out of 5000000
- 39091 multiletter control sequences out of 15000+600000
+ 19240 strings out of 411476
+ 372690 string characters out of 5820613
+ 1856001 words of memory out of 5000000
+ 39186 multiletter control sequences out of 15000+600000
  517032 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  72i,5n,84p,594b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on cd_report.pdf (8 pages).
+Output written on cd_report.pdf (9 pages).
