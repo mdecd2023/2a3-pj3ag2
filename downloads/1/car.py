@@ -2,7 +2,7 @@
 #from zmqRemoteApi import RemoteAPIClient
 from zmqRemoteApi_IPv6 import RemoteAPIClient
 import keyboard
-client = RemoteAPIClient('192.168.1.24', 23000)
+client = RemoteAPIClient('127.0.0.1', 23000)
 
 print('Program started')
 sim = client.getObject('sim')
