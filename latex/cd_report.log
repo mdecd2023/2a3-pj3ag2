@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.5.20)  2 JUN 2023 16:42
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 23.1 Portable) (preloaded format=xelatex 2023.5.20)  4 JUN 2023 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -930,23 +930,29 @@ File: ./../images//球門.png Graphic file (type bmp)
 <./../images//球門.png>
 File: ./../images//螢幕擷取畫面 2023-05-22 101830.png Graphic file (type bmp)
 <./../images//螢幕擷取畫面 2023-05-22 101830.png>
- [4]) (cd_report.aux)
+ [4]
+File: ./../images//螢幕擷取畫面 2023-05-22 105450.png Graphic file (type bmp)
+<./../images//螢幕擷取畫面 2023-05-22 105450.png>
+ [5]) (cd_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Package rerunfilecheck Warning: File `cd_report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: File `cd_report.out' has not changed.
-(rerunfilecheck)             Checksum: CF2D50F6C62AD8D4A8C7C511B6582F63;706.
+Package rerunfilecheck Info: Checksums for `cd_report.out':
+(rerunfilecheck)             Before: CF2D50F6C62AD8D4A8C7C511B6582F63;706
+(rerunfilecheck)             After:  0862BD8480EA783F5D0B631C32F562C3;793.
  ) 
 Here is how much of TeX's memory you used:
- 19240 strings out of 411476
- 372690 string characters out of 5820613
+ 19259 strings out of 411476
+ 373392 string characters out of 5820613
  1856001 words of memory out of 5000000
- 39186 multiletter control sequences out of 15000+600000
+ 39205 multiletter control sequences out of 15000+600000
  517032 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  72i,5n,84p,594b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on cd_report.pdf (9 pages).
+Output written on cd_report.pdf (10 pages).
