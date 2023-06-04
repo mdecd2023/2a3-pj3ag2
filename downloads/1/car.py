@@ -2,14 +2,14 @@
 #from zmqRemoteApi import RemoteAPIClient
 from zmqRemoteApi_IPv6 import RemoteAPIClient
 import keyboard
-client = RemoteAPIClient('127.0.0.1', 23000)
+client = RemoteAPIClient('192.168.1.24', 23000)
 
 print('Program started')
 sim = client.getObject('sim')
 sim.startSimulation()
 print('Simulation started')
 
-car = 4
+car = 5
 def setBubbleRobVelocity(leftfrontWheelVelocity, rightfrontWheelVelocity,leftbackWheelVelocity,rightbackWheelVelocity):
     leftfrontMotor = sim.getObject('/Shape['+str(car)+']/LF')
     rightfrontMotor = sim.getObject('/Shape['+str(car)+']/RF')
