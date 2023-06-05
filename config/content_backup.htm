@@ -1216,26 +1216,26 @@ while True:
 
 </pre>
 <h1>note</h1>
-<p><span>*在CoppeliaSim中，「proximity sensors」和「vision sensors」是兩種不同的感測器類型，具有不同的功能和用途。</span></p>
+<p><span style="color: #ff9900;"><strong>*在CoppeliaSim中，「proximity sensors」和「vision sensors」是兩種不同的感測器類型，具有不同的功能和用途。</strong></span></p>
 <p><span>proximity sensors(近距離感應器)-&gt;用於檢測物體之間的距離或接近物體的存在</span></p>
 <p><span>vision sensors(視覺感應器)-&gt;用於模擬視覺感知能力，可以捕捉和處理場景中的圖像或影像</span></p>
-<p><span>*Tkinter是Python的標準GUI套件，它提供了一組工具和函式庫，使您能夠創建視窗、按鈕、文本框等GUI元件。</span></p>
-<p>*CoppeliaSim中提供了多種類型的joints（關節）物件，用於模擬機械結構的運動。以下是CoppeliaSim中可用的常見關節物件類型的總結：</p>
+<p><strong><span style="color: #ff9900;">*Tkinter是Python的標準GUI套件，它提供了一組工具和函式庫，使您能夠創建視窗、按鈕、文本框等GUI元件</span>。</strong></p>
+<p><span style="color: #ff9900;"><strong>*CoppeliaSim中提供了多種類型的joints（關節）物件，用於模擬機械結構的運動</strong>。</span>以下是CoppeliaSim中可用的常見關節物件類型的總結：</p>
 <p>1.Revolute joint（旋轉關節）：允許物體在一個軸向上進行旋轉運動，類似於旋轉軸承或旋轉門鉸鏈。</p>
 <p>2.Prismatic joint（平移關節）：允許物體在一個軸向上進行直線運動，類似於滑動門或平移台。</p>
 <p>3.Spherical joint（球形關節）：允許物體在三個軸向上進行旋轉運動，類似於球形關節或肩關節。</p>
 <p>4.Planar joint（平面關節）：允許物體在二維平面上進行運動，類似於平面鏈條或二維平移機構。</p>
 <p>5.Cylinder joint（圓柱關節）：允許物體在圓柱形表面上進行運動，類似於滾筒或圓柱體運動。</p>
 <p>6.Screw joint（螺旋關節）：結合旋轉和平移運動的關節，類似於螺旋運動或螺旋傳動結構。</p>
-<p>*CoppeliaSim（以前稱為V-REP）是由Coppelia Robotics開發的機器人仿真軟體，提供了一個強大的仿真環境和多種應用程式介面，包括Python。<br/>CoppeliaSim本身並不是直接使用Python編寫的套件，而是使用C++開發的。</p>
+<p><strong><span style="color: #ff9900;">*</span></strong>CoppeliaSim（以前稱為V-REP）是由Coppelia Robotics開發的機器人仿真軟體，提供了一個強大的仿真環境和多種應用程式介面，包括Python。<br/>CoppeliaSim本身並不是直接使用Python編寫的套件，而是使用C++開發的。</p>
 <p>在CoppeliaSim中，Python被用作其中一種主要的編寫程序語言，可以使用Python API來控制和操作仿真場景中的物體、機器人和傳感器等元素。</p>
 <p>CoppeliaSim的Python API允許您使用Python編寫程序，通過對場景中的物體應用變換、設置物體屬性、控制運動和模擬等操作來實現各種仿真目的。</p>
 <p>您可以使用Python API進行運動控制、感測模擬、路徑規劃、視覺處理等應用，並與其他Python庫和工具集成，以擴展仿真功能。</p>
 <p>(因此，可以說CoppeliaSim套件是採用Python編寫的，並且提供了Python API供開發者使用。這使得使用Python在CoppeliaSim中進行機器人仿真和控制變得更加方便和靈活)</p>
-<p>*CoppeliaSim 中的 proximity sensor（<span>近距離</span>傳感器）可以模擬 ultrasonic（超聲波）或 infrared（紅外線）感測器<br/>proximity sensor（<span>近距離</span>傳感器）-&gt;是基於仿真模型和參數設定的，用於模擬真實世界的感測器行為</p>
-<p>*每一個 CoppeliaSim 場景不一定都有 Layers(圖層)、child script(物件上附加的Lua腳本)、Pages(頁面)，皆並不是場景必備的元素。</p>
-<p>*CoppeliaSim場景中，如果要變更物體的orientation（方向），可以使用Position Dialog（位置對話框）<br/>Position Dialog（位置對話框）-&gt;不僅限於變更物體的方向，還可以調整物體的位置和尺寸等屬性</p>
-<p>*當利用 zmqRemoteAPI 控制場景物件時, 只能使用 Lua 進行。 (zmqRemoteAPI僅支持Lua腳本，並不支持使用其他語言，如Python，進行控制)</p>
+<p><span style="color: #ff9900;"><strong>*CoppeliaSim 中的 proximity sensor（近距離傳感器）可以模擬 ultrasonic（超聲波）或 infrared（紅外線）感測器</strong></span><br/>proximity sensor（<span>近距離</span>傳感器）-&gt;是基於仿真模型和參數設定的，用於模擬真實世界的感測器行為</p>
+<p><strong><span style="color: #ff9900;">*每一個 CoppeliaSim 場景不一定都有 Layers(圖層)、child script(物件上附加的Lua腳本)、Pages(頁面)，皆並不是場景必備的元素。</span></strong></p>
+<p><strong><span style="color: #ff9900;">*CoppeliaSim場景中，如果要變更物體的orientation（方向），可以使用Position Dialog（位置對話框）</span></strong><br/>Position Dialog（位置對話框）-&gt;不僅限於變更物體的方向，還可以調整物體的位置和尺寸等屬性</p>
+<p><span style="color: #ff9900;"><strong>*當利用 zmqRemoteAPI 控制場景物件時, 只能使用 Lua 進行。</strong></span> (zmqRemoteAPI僅支持Lua腳本，並不支持使用其他語言，如Python，進行控制)</p>
 <p></p><h2>shortcuts</h2>
 <p></p>
 <ul>
