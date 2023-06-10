@@ -78,7 +78,19 @@
 <p><span style="background-color: #ffff00;"><strong>最後修改樣式</strong></span></p>
 <p><strong><a href="/downloads/可愛車車球場.ttt">最後修改樣式.ttt</a></strong></p>
 <p><strong><img alt="" height="323" src="/images/球場總和照.png" width="607"/></strong></p>
-<p><strong><img alt="" height="390" src="/images/成品.png" width="631"/></strong></p><h2>機械計分繪製</h2>
+<p><strong><img alt="" height="390" src="/images/成品.png" width="631"/></strong></p>
+<h2>開會過程</h2>
+<p>討論該如何製作記分板以及球員該如何改造，並且研究球場的規格及如何建立</p>
+<p>分工表</p>
+<p>1.球場設計及繪製、網頁製作統整:41023106</p>
+<p>2.球員繪製、感測器建立、Latex報告撰寫:41023113</p>
+<p>3.記分板繪製，coppeliasim調製:41023153</p>
+<p>4.自動控制程式，程式撰寫統整:41023125</p>
+<p>5.影片<span>、</span>ppt<span>、網頁整理</span>:41023116、41023151</p>
+<p>6.note:41023103</p>
+<p>本次開會參與人員:</p>
+<p>41023125、41023106、41023113、41023153</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/M0Wz7u_cKvs" title="YouTube video player" width="560"></iframe></p><h2>機械計分繪製</h2>
 <p>我們參考onshape公開資料庫的機械計分器，並將其改造為我們所需之樣式</p>
 <p><img alt="" height="239" src="/images/參考.png" width="360"/></p>
 <p>成品圖</p>
@@ -117,7 +129,8 @@
 <p><img alt="" height="289" src="/images/齒輪13.png" width="375"/></p>
 <p><img alt="" height="394" src="/images/齒輪12.png" width="470"/></p>
 <p><span style="background-color: #ffff00;"><strong>計分器建立影片</strong></span></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/o-jV3A3V8iU" title="YouTube video player" width="560"></iframe></p><h1>程式</h1>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/o-jV3A3V8iU" title="YouTube video player" width="560"></iframe></p>
+<h1>程式</h1>
 <p>記分板測試</p>
 <pre class="brush:lua;auto-links:false;toolbar:false" contenteditable="false">local joints = {{},{},{},{}}
 local angle = {0,0,0,0}
@@ -1277,7 +1290,8 @@ while True:
 <p><span style="color: #ff9900;"><strong>*當利用 zmqRemoteAPI 控制場景物件時, 只能使用 Lua 進行。</strong></span> (zmqRemoteAPI僅支持Lua腳本，並不支持使用其他語言，如Python，進行控制)</p>
 <p><span style="color: #ff9900;">*</span><span>Legacy Python remote API 因為其效能無法與 zmqRemoteAPI 比較, 因此隨後的 remoteAPI 都將採用 zmq 的方式進行控制, 利用 Python 進行控制過程, 必須要能呈現不同改版的差異</span></p>
 <p><span style="color: #ff9900;">*<span><span style="color: #000000;">CoppeliaSim 的本體是採用</span> C++ 與 Qt 編寫<span style="color: #000000;">, 並利用 Lua 來進行彈性設定與功能延伸, 將 Lua 寫在 .ttt 或 .ttm 中的好處是容易打包, 但在改版過程則沒有文字檔格式的改版資料</span></span></span></p>
-<p></p><h2>快捷鍵</h2>
+<p></p>
+<h2>快捷鍵</h2>
 <p><span>當焦點在 </span><a href="https://mde.tw/pjcopsim/content/userInterface.html#SceneHierarchy">scene hierarchy</a><span><span> 或 </span></span><a href="https://mde.tw/pjcopsim/content/pagesAndViews.html">page</a>上時</p>
 <ul>
 <li><span>CTRL+O：打開場景</span></li>
@@ -1292,7 +1306,8 @@ while True:
 <li><span><span>CTRL+B：調整視圖以適合所選對象，如果沒有選擇對象則調整整個場景。</span></span><span><span>(*</span></span><span><span>重點需要放在一個視圖上)</span></span></li>
 <li><span><span>CTRL+ALT+C：將焦點設置在 Lua指令窗上</span></span></li>
 <li><span><span>CTRL+L：清除狀態欄（當焦點在 Lua 指令窗上時）</span></span></li>
-</ul><h1>連線說明</h1>
+</ul>
+<h1>連線說明</h1>
 <p>zmq連線設定(41023151)</p>
 <p></p>
 <p>1.將防火牆關閉(三個都關)</p>
