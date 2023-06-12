@@ -9,7 +9,7 @@ sim = client.getObject('sim')
 sim.startSimulation()
 print('Simulation started')
 
-car = 5
+car = 4
 def setBubbleRobVelocity(leftfrontWheelVelocity, rightfrontWheelVelocity,leftbackWheelVelocity,rightbackWheelVelocity):
     leftfrontMotor = sim.getObject('/Shape['+str(car)+']/LF')
     rightfrontMotor = sim.getObject('/Shape['+str(car)+']/RF')
